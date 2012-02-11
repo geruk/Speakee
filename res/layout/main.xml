@@ -6,22 +6,36 @@
     <LinearLayout android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/userspeakee"
-        android:layout_alignParentBottom="true">        
+        android:layout_alignParentBottom="true">
+        <include layout="@layout/userspeakee"/>
     </LinearLayout>
     <LinearLayout android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/usertext"
-        android:layout_above="@id/userspeakee">        
+        android:layout_above="@id/userspeakee">       
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="What you said"/>
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_content"
+            android:minLines="3"/>
     </LinearLayout>
     <LinearLayout android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/androidspeakee"
-        android:layout_above="@id/usertext">        
+        android:layout_above="@id/usertext">
+        <include layout="@layout/androidspeakee"/>"
     </LinearLayout>
     <LinearLayout android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/androidtext"
-        android:layout_above="@id/userspeakee"
+        android:layout_above="@id/androidspeakee"
         android:layout_alignParentTop="true">
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/android_content"
+            android:minLines="3"/>
     </LinearLayout>
 </RelativeLayout>
